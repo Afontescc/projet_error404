@@ -1,7 +1,28 @@
 body {
-    background-image: url(https://archive.org/download/windows-xp-bliss-4k-lu-3840x2400/windows-xp-bliss-4k-lu-3840x2400.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: auto;
+    background-color: rgb(0,0,0);
+}
+
+.dvd {
+    position:absolute;
+    animation: left-to-right linear 5s infinite alternate, top-to-down linear 15s infinite alternate;
+}
+
+@keyframes top-to-down {
+    0% {
+        top: 0vh;
     }
+
+    100% {
+        top: 100vh;
+    }
+}
+  
+@keyframes left-to-right {
+    0% {
+        left: 0vw;
+    }
+
+    100% {
+        left: 100vw;
+    }
+}
