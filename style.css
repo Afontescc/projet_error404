@@ -2,9 +2,18 @@ body {
     background-color: rgb(0,0,0);
 }
 
+img {opacity: 0;
+}
+
 .dvd {
     position:absolute;
-    animation: left-to-right linear 4s infinite alternate, top-to-down linear 10s infinite alternate;
+    animation: left-to-right linear 3s infinite alternate, top-to-down linear 10s infinite alternate, image-colour1 30s steps(1) infinite;
+    height: 108px ;
+    width: 192px ;
+    mask-image: url('404w.png');
+    mask-size: contain;
+    -webkit-mask-image: url('404w.png');
+    -webkit-mask-size: contain;
 }
 
 @keyframes top-to-down {
@@ -25,4 +34,19 @@ body {
     100% {
         left: calc(100vw - 192px);
     }
+}
+
+@keyframes image-colour1 {
+    0%  {background-color: rgb(225,165,165); }
+    10% {background-color: rgb(159,153,195);}
+    20% {background-color: rgb(94,17,17);}
+    30% {background-color: rgb(52,165,105); }
+    33.3% {background-color: rgb(159,153,195);}
+    40% {background-color: rgb(143,61,144);}
+    50% {background-color: rgb(225,165,165); }
+    60% {background-color: rgb(159,153,195);}
+    66.6% {background-color: rgb(225,165,165); }
+    70% {background-color: rgb(94,17,17);}
+    80% {background-color: rgb(52,165,105); }
+    90% {background-color: rgb(143,61,144);}
 }
